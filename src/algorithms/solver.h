@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../library/item.h"
 #include "../library/bin.h"
+#include "../library/item.h"
+
+#include <memory>
 
 class ISolver {
 public:

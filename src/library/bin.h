@@ -9,11 +9,13 @@ class Bin {
 public:
     explicit Bin(const Size& capacity);
 
+    const Size& GetCapacity() const;
     const Size& GetResidualCapacity() const;
     const std::vector<uint32_t>& GetIdsOfContainedItems() const;
 
     bool CanAddItem(const Item& item) const;
     void AddItem(Item& item);
+    void RemoveItem(Item& item);
 
 private:
     Size Capacity_;

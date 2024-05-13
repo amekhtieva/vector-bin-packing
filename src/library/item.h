@@ -12,6 +12,7 @@ public:
     const Size& GetSize() const;
 
     void MarkPacked();
+    void MarkUnpacked();
     bool IsPacked() const;
 
 private:

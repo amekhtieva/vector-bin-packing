@@ -17,6 +17,10 @@ void Item::MarkPacked() {
     Packed_ = true;
 }
 
+void Item::MarkUnpacked() {
+    Packed_ = false;
+}
+
 bool Item::IsPacked() const {
     return Packed_;
 }

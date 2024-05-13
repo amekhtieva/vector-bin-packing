@@ -1,5 +1,7 @@
 #include "size.h"
 
+#include <algorithm>
+
 bool operator<(const Size& lhs, const Size& rhs) {
     for (size_t i = 0; i < lhs.size(); ++i) {
         if (lhs[i] >= rhs[i]) {
@@ -93,4 +95,17 @@ uint64_t DotProduct(const Size& lhs, const Size& rhs) {
 
 Size Square(const Size& vec) {
     return vec * vec;
+}
+
+uint64_t L1(const Size& vec) {
+    return SumOfElements(vec);
+}
+
+uint64_t L2(const Size& vec) {
+    // without sqrt because it is only used for comparison
+    return SumOfElements(Square(vec));
+}
+
+uint64_t LInf(const Size& vec) {
+    return *std::max_element(vec.begin(), vec.end());
 }

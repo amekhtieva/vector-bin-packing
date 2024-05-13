@@ -21,3 +21,7 @@ uint64_t ProductOfElements(const Size& vec);
 
 uint64_t DotProduct(const Size& lhs, const Size& rhs);
 Size Square(const Size& vec);
+
+uint64_t L1(const Size& vec);
+uint64_t L2(const Size& vec);
+uint64_t LInf(const Size& vec);
